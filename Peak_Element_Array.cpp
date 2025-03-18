@@ -28,7 +28,6 @@ class Solution {
     int main() {
         Solution sol;
         vector<int> nums = {5, 6, 7, 4, 3, 2, 1};
-        int target = 8;
         
         int result = sol.peakIndexInMountainArray(nums);
 

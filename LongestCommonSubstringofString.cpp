@@ -9,15 +9,15 @@ string longestCommonPrefix(vector<string> &arr) {
 
     string ans = "";
     for(int i = 0; i < arr[0].length(); i++) {
-        char current = arr[0][i]; // Take the current character from the first string
+        char current = arr[0][i]; 
         for(int j = 1; j < arr.size(); j++) {
             if(i >= arr[j].length() || arr[j][i] != current) {
-                return ans; // Mismatch found or string ended
+                return ans; 
             }
         }
-        ans += current; // Add the common character
+        ans += current; 
     }
-    return ans; // Return prefix if loop completes
+    return ans; 
 }
 
 int main() {
@@ -26,7 +26,7 @@ int main() {
     cin >> n;
 
     vector<string> s(n);
-    cin.ignore(); // To handle the newline character after taking 'n'
+    cin.ignore(); 
 
     cout << "Enter the strings:" << endl;
     for(int i = 0; i < n; i++) {

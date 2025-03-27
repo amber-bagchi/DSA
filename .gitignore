@@ -1,7 +1,3 @@
-c_cpp_properties.json
-settings.json
-
-
 LongestCommonSubstringofString.exe
 Find_First_Last_Position_of_Element_in_Sorted_Array.exe
 Peak_Element_Array.exe
@@ -21,4 +17,9 @@ Isomorphic_String.exe
 Permutation_in_String.exe
 Rotate_String.exe
 Anagram_String.exe
+Sort_Character_By_Frequency.exe
+
+
+c_cpp_properties.json
+settings.json
 

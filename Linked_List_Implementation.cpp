@@ -157,6 +157,20 @@ void print(Node *&head)
         temp = temp->next;
     }
 }
+
+int getCount(struct Node* head) {
+
+    Node* temp = head;
+    int cnt = 1;
+    while(temp->next!=NULL){
+        temp = temp->next;
+        cnt++;
+    }
+    
+    return cnt;
+}
+
+
 int main() {
     Node *head = NULL;
     int choice, data, pos;
@@ -170,7 +184,8 @@ int main() {
         cout << "5. Delete from Tail\n";
         cout << "6. Delete from a Position\n";
         cout << "7. Print Linked List\n";
-        cout << "8. Exit\n";
+        cout << "8. Get Count of Nodes\n";  // New option added
+        cout << "9. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -213,14 +228,18 @@ int main() {
                 print(head);
                 break;
 
-            case 8:
+            case 8:  // New case for getting count
+                cout << "Total nodes in the linked list: " << getCount(head) << endl;
+                break;
+
+            case 9:
                 cout << "Exiting program..." << endl;
                 break;
 
             default:
                 cout << "Invalid choice! Please enter a valid option." << endl;
         }
-    } while (choice != 8);
+    } while (choice != 9);
 
     return 0;
 }

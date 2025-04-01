@@ -129,6 +129,21 @@ void deleteAtPosition(Node* &head, int pos){
 
 }
 
+Node* reverseDLL(Node* head) {
+    // Your code here
+    Node* rev = NULL;
+    
+    Node* temp = head;
+    
+    while(temp!=NULL){
+        insertAtHead(rev, temp->data);
+        temp=temp->next;
+    }
+    
+    
+    return rev;
+}
+
 void print(Node* head){
 
     Node* temp = head;
@@ -156,7 +171,8 @@ int main() {
         cout << "5. Delete from Tail\n";
         cout << "6. Delete from a Position\n";
         cout << "7. Print Linked List\n";
-        cout << "8. Exit\n";
+        cout << "8. Reverse Linked List\n";  // Added Reverse Option
+        cout << "9. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
@@ -199,17 +215,23 @@ int main() {
                 print(head);
                 break;
 
-            case 8:
+            case 8: // Reverse Doubly Linked List
+                head = reverseDLL(head);
+                cout << "Doubly Linked List reversed successfully!" << endl;
+                break;
+
+            case 9:
                 cout << "Exiting program..." << endl;
                 break;
 
             default:
                 cout << "Invalid choice! Please enter a valid option." << endl;
         }
-    } while (choice != 8);
+    } while (choice != 9);
 
     return 0;
 }
+
 
 
 

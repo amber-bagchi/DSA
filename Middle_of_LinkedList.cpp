@@ -1,49 +1,45 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node{
-    public:
+class Node
+{
+public:
     int data;
-    Node* prev;
-    Node* next;
+    Node *next;
 
-    Node(int data){
+    Node(int data)
+    {
         this->data = data;
-        this->prev = NULL;
         this->next = NULL;
     }
 };
 
-void insertAtHead(Node* &head, int data){
-
-    if(head == NULL){
-        Node* temp = new Node(data);
-        head = temp;
+void insertAtHead(Node *&head, int data)
+{
+    if (head == NULL)
+    {
+        head = new Node(data);
         return;
     }
 
-    Node* temp = new Node(data);
-    head->prev = temp;
+    Node *temp = new Node(data);
     temp->next = head;
     head = temp;
-
 }
 
-void insertAtTail(Node* &head, int data){
-
-    if(head==NULL){
-        insertAtHead(head, data);
+void insertAtTail(Node *&head, int data)
+{
+    if (head == NULL)
+    {
+        head = new Node(data);
         return;
     }
-    Node* temp = head;
-    while(temp->next!=NULL){
+    Node *temp = head;
+    while (temp->next != NULL)
+    {
         temp = temp->next;
     }
-
-    Node *newNode = new Node(data);
-    temp->next = newNode;
-    newNode->prev = temp;
-
+    temp->next = new Node(data);
 }
 
 Node* getMiddle(Node* head){
@@ -81,7 +77,7 @@ int main() {
         insertAtTail(head, data);
     }
 
-    cout << "Doubly Linked List: ";
+    cout << "Original Linked List: ";
     print(head);
 
     Node* middle = getMiddle(head);

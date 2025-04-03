@@ -28,6 +28,8 @@ Doubly_Linked_List_Implementation.exe
 Middle_of_LinkedList.exe
 Reverse_Linked_List.exe
 Detect_Cycle_in_Linked_List.exe
+Count_Number_of_Nodes_in_Cycle.exe
+Linked_List_Palindrome.exe
 
 
 c_cpp_properties.json

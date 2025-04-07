@@ -40,6 +40,9 @@ Add_2_Numbers_Linked_List.exe
 Delete_All_Occurence_Linked_List.exe
 Remove_Duplicates_Sorted_Linked_List.exe
 Reverse_Nodes_in_k_Group.exe
+Flatten_Linked_List.exe
+Rotate_List.exe
+Copy_List_with_Random_Pointer.exe
 
 c_cpp_properties.json
 settings.json

@@ -48,7 +48,7 @@ Subsets_Using_Recursion.exe
 Subsets_Duplicates_Using_Recursion.exe
 Permutation_Recursion.exe
 NQueen_Recursion.exe
-
+Sudoku_Solver_Recursion.exe
 
 c_cpp_properties.json
 settings.json
